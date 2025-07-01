@@ -58,3 +58,4 @@ def analyze_entries(parsed_data):
         "missing": missing,
         "summary": summary,
     }
+    

@@ -74,4 +74,3 @@ if uploaded_file:
         ax.axis("equal")
         st.pyplot(fig)
     
-
