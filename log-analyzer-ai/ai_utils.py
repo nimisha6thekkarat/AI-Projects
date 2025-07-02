@@ -1,10 +1,6 @@
-import os
-import json
 import requests
 from openai import OpenAI
 from dotenv import load_dotenv
-import pandas as pd
-import streamlit as st
 
 load_dotenv()
 client = OpenAI() # Automatically uses OPENAI_API_KEY from environment
@@ -50,10 +46,12 @@ def is_url_accessible(url: str) -> bool:
         return False
 
 def style_missing_entries(df):
+    df = df.copy()
+
     def highlight_row(row):
         if row.get("ai_reason") and "not" in row.get("ai_reason", "").lower() and is_url_accessible(row.get("url")):
-            return ["background-color: salmon"] * len(row)
+            return ['background-color: salmon'] * len(row)  # light red
         else:
-            return ["background-color: lightgreen"] * len(row)
+            return ['background-color: lightgreen'] * len(row)  # light green
 
     return df.style.apply(highlight_row, axis=1)

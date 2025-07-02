@@ -87,7 +87,8 @@ def parse_log_file(file_obj):
                     if item.get("_type") == "DetailItem":
                         detail_items.append(item)
                 except json.JSONDecodeError as e:
-                    print(f"Failed to parse DetailItem JSON: {e}")
+                    # print(f"Failed to parse DetailItem JSON: {e}")
+                    pass
                 buffer = []
                 collecting_json = False
     summary = {

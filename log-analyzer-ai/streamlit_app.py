@@ -38,9 +38,19 @@ if uploaded_file:
     st.json(report["summary"])
 
     # Missing entries
-    if report["missing"]:
-        st.markdown("## ❌ Missing Entries")
-        st.dataframe(report["missing"], use_container_width=True)
+    if report.get("missing"):
+        st.markdown("## ❌ Missing Entries (With AI Diagnosis)")
+        missing_df = pd.DataFrame(report["missing"])
+        cols = [col for col in ["url", "pid", "title", "reason", "ai_reason"] if col in missing_df.columns]
+        styled_df = style_missing_entries(missing_df[cols])
+        st.dataframe(styled_df, use_container_width=True)
+
+        if st.button("🔍 Rerun AI Diagnosis for Missing URLs"):
+            from ai_utils import diagnose_missing_url
+            with st.spinner("Re-analyzing missing URLs with AI..."):
+                for entry in report["missing"]:
+                    entry["ai_reason"] = diagnose_missing_url(entry.get("url"), entry.get("reason", ""))
+            st.rerun()
 
     # Matched entries (optional)
     with st.expander("✅ Matched Entries", expanded=False):
@@ -74,19 +84,5 @@ if uploaded_file:
         ax.pie(match_data["Count"], labels=match_data["Status"], autopct="%1.1f%%", startangle=90)
         ax.axis("equal")
         st.pyplot(fig)
-    
-     # Missing entries
-    if report.get("missing"):
-        st.markdown("## \u274c Missing Entries (With AI Diagnosis)")
-        missing_df = pd.DataFrame(report["missing"])
-        cols = [col for col in ["url", "pid", "title", "reason", "ai_reason"] if col in missing_df.columns]
-        styled_df = style_missing_entries(missing_df[cols])
-        st.dataframe(styled_df, use_container_width=True)
 
-        if st.button("🔍 Rerun AI Diagnosis for Missing URLs"):
-            from ai_utils import diagnose_missing_url
-            with st.spinner("Re-analyzing missing URLs with AI..."):
-                for entry in report["missing"]:
-                    entry["ai_reason"] = diagnose_missing_url(entry.get("url"), entry.get("reason", ""))
-            st.rerun()
     
