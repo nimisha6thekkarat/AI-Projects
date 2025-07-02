@@ -1,3 +1,4 @@
+from ai_utils import diagnose_missing_url
 def analyze_entries(parsed_data):
     title_urls = parsed_data["title_urls"]
     core_api_map = parsed_data["core_api_map"]
@@ -18,7 +19,8 @@ def analyze_entries(parsed_data):
             missing.append({
                 "url": url,
                 "pid": None,
-                "reason": "PID not found in CORE API entry"
+                "reason": "PID not found in CORE API entry",
+                "ai_reason": diagnose_missing_url(url, "PID not found in CORE API entry")
             })
             continue
 
@@ -26,16 +28,19 @@ def analyze_entries(parsed_data):
         title = entry.get("title", "N/A")
 
         detail = detail_items_by_url.get(url)
-        new_list=[]
+        
         if not detail:
             reason = "No DetailItem generated"
             if url in retry_failures:
                 reason = retry_failures[url]["reason"]
+            ai_reason = diagnose_missing_url(url, reason)
+            
             missing.append({
                 "url": url,
                 "pid": pid,
                 "title": title,
-                "reason": reason
+                "reason": reason,
+                "ai_reason": ai_reason
             })
         else:
             matched.append({
@@ -57,5 +62,6 @@ def analyze_entries(parsed_data):
         "matched": matched,
         "missing": missing,
         "summary": summary,
+        "retry_failures": retry_failures,         # ✅ ADD THIS
+        "detail_items": detail_items_list  
     }
-    

@@ -116,4 +116,3 @@ if __name__ == "__main__":
     import pprint
     pprint.pprint(parsed_data["summary"])
     pprint.pprint(report)
-
