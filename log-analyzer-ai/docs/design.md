@@ -29,7 +29,7 @@ Plaintext `.txt` file generated from crawl logs.
 
 - **Title URLs:**
   ```
-  Adding additional url https://www.primevideo.com/detail/<pid>
+  Adding additional url <url/><pid>
   ```
 
 - **Request Count:**
@@ -49,7 +49,7 @@ Plaintext `.txt` file generated from crawl logs.
     "_type": "DetailItem",
     ...
     "id": "<pid>",
-    "url": "https://www.primevideo.com/detail/<pid>"
+    "url": "<url><pid>"
   }
   ```
 
@@ -158,7 +158,7 @@ Report includes:
   },
   "missing_entries": [
     {
-      "url": "https://www.primevideo.com/detail/XYZ",
+      "url": "<url>",
       "reason": "PID not found in CORE API entry"
     },
     {
@@ -195,6 +195,19 @@ Report includes:
 | AI Layer     | OpenAI / Local LLM     |
 
 ---
+### 8.1 AI Layer
+
+**LLM Integration:**  
+Uses OpenAI’s API (or a local LLM) to enrich analysis results.
+
+**Functions:**
+- **Error Summarization:** Transforms structured log issues into concise plain‑English summaries.  
+- **Severity Classification:** Flags entries as critical, config‑related, or informational.  
+- **Root‑Cause Hypotheses:** Suggests probable causes via pattern recognition on log data.  
+- **Natural‑Language Explanations:** Provides guidance for non‑developers on next steps.
+
+**Workflow:**  
+After `analyzer.py` produces structured outputs, key snippets and aggregated stats are sent to the LLM, which returns the insights used in the final report.
 
 ## 9. 🚀 Future Enhancements
 
