@@ -62,6 +62,6 @@ def analyze_entries(parsed_data):
         "matched": matched,
         "missing": missing,
         "summary": summary,
-        "retry_failures": retry_failures,         
+        "retry_failures": retry_failures,
         "detail_items": detail_items_list  
     }

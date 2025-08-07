@@ -1,0 +1,301 @@
+2025-06-02 14:51:31 INFO Log opened.
+2025-06-02 14:51:31 INFO [stderr] /usr/local/lib/python3.11/contextlib.py:137: SHScrapyDeprecationWarning: The sh_scrapy.crawl.ignore_warnings function is deprecated.
+2025-06-02 14:51:31 INFO [stderr]   return next(self.gen)
+2025-06-02 14:51:33 INFO [scrapy.utils.log] Scrapy 2.11.2 started (bot: looper)
+2025-06-02 14:51:33 INFO [scrapy.utils.log] Versions: lxml 5.3.0.0, libxml2 2.12.9, cssselect 1.2.0, parsel 1.9.1, w3lib 2.2.1, Twisted 24.7.0, Python 3.11.10 (main, Oct 19 2024, 01:04:28) [GCC 12.2.0], pyOpenSSL 24.2.1 (OpenSSL 3.3.2 3 Sep 2024), cryptography 43.0.1, Platform Linux-6.8.0-55-generic-x86_64-with-glibc2.36
+2025-06-02 14:51:33 INFO [looper.core.core_api] You are using the Core API with: *****************
+2025-06-02 14:51:53 INFO [amazon.de_discovery] CORE API ENTRY COUNT IS 1413
+2025-06-02 14:51:53 INFO [amazon.de_discovery] CORE API ENTRY #1
+[
+  "f6a812e5-91a8-4f8a-adcc-3468fe0e7466",
+  "Alita: Battle Angel",
+  "Amazon",
+  "https://www.amazon.de/gp/video/detail/B07RYP1QWL/",
+  "B07RYP1QWL"
+]
+2025-06-02 14:51:53 INFO [amazon.de_discovery] CORE API ENTRY #869
+[
+  "9dcc13b3-1f70-42fc-b275-51e3f3e552f8",
+  "Ad Astra",
+  "Amazon 4K",
+  "https://www.amazon.de/gp/video/detail/B082TTDWHK/",
+  "B082TTDWHK"
+]
+2025-06-02 14:51:53 INFO [amazon.de_discovery] CORE API ENTRY #1341
+[
+  "f51e7c2b-b420-47d7-9ced-fd2ada0f85de",
+  "Cocktail",
+  "Amazon",
+  "https://www.amazon.de/gp/video/detail/B00OU7BZ62/",
+  "B00OU7BZ62"
+]
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] Adding requests from make_generate_scan_requests...
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] 1 request(s) generated
+2025-06-02 14:51:59 DEBUG [scrapy.core.engine] Crawled (200) <GET data:,> (referer: None)
+2025-06-02 14:51:59 DEBUG [scrapy.core.scraper] Scraped from <200 data:,>
+{
+  "_type": "ScanItem",
+  "_typename": "scan",
+  "_uuid": "22e3e616-3fc1-11f0-9f78-0242ac11000f",
+  "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+  "_job_id": "564882/5/615",
+  "_spider_name": "amazon.de_discovery",
+  "_query": null,
+  "id": "2025/06/02-564882/5/615",
+  "name": "Amazon DE",
+  "scraper": "amazon.de_discovery/0.0.1 LooperCore/0.9.0",
+  "store": "Amazon",
+  "store_variant": "DE",
+  "url": "https://app.scrapinghub.com/p/564882/5/615/items",
+  "startTime": "2025-06-02T14:51:59.508330+00:00",
+  "endTime": ""
+}
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] Adding requests from make_generate_scan_requests...
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] No new requests generated
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] MERCH DISABLED
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] Adding requests from make_hardcoded_requests...
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] No new requests generated
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] Adding requests from make_additional_urls_requests...
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] Adding additional url https://www.amazon.de/gp/video/detail/B09PGH3ZSP/
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] Adding additional url https://www.amazon.de/gp/video/detail/B082TTDWHK/
+2025-06-02 14:51:59 DEBUG [amazon.de_discovery] Adding additional url https://www.amazon.de/gp/video/detail/B00OU7BZ62/
+2025-06-02 14:55:12 ERROR [amazon.de_discovery] Expecting value: line 1 column 1 (char 0) bad response in extract_title_data for https://www.amazon.de/gp/video/detail/B082TTDWHK/
+2025-06-02 14:55:24 DEBUG [scrapy.downloadermiddlewares.retry] Retrying <GET https://www.amazon.de/gp/video/detail/B082TTDWHK/> (failed 1 times): could_not_parse_json
+2025-06-02 14:57:06 DEBUG [scrapy.core.engine] Crawled (404) <GET https://www.amazon.de/gp/video/detail/B082TTDWHK/> (referer: https://www.amazon.de/gp/video/detail/B082TTDWHK/) ['zyte-api']
+2025-06-02 14:57:19 ERROR [scrapy.downloadermiddlewares.retry] Gave up retrying <GET https://www.amazon.de/gp/video/detail/B082TTDWHK/> (failed 6 times): could_not_parse_json
+2025-06-02 14:52:03 DEBUG [scrapy.core.scraper] Scraped from <200 https://www.amazon.de/gp/video/detail/B00OU7BZ62/>
+{
+  "_type": "DetailItem",
+  "_typename": "detail",
+  "_uuid": "2495d35c-3fc1-11f0-9f78-0242ac11000f",
+  "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+  "_original_url": null,
+  "_original_image_urls": [
+    "https://m.media-amazon.com/images/S/pv-target-images/4cb6b1c9f7403ff5d027d3d8f499dd158f9187f23bac2fe7c5346d6b90c19bb7.jpg",
+    "https://m.media-amazon.com/images/S/pv-target-images/1f856a750a819ea82bafd51f9ee40202e0a43e6c485dff701dba72ef4958d066.jpg"
+  ],
+  "_hardcoded_url": true,
+  "_imdb_rating": null,
+  "_current_rating": "16",
+  "id": "B00OU7BZ62",
+  "url": "https://www.amazon.de/gp/video/detail/B00OU7BZ62/",
+  "collection_id": "",
+  "name": "Cocktail",
+  "display_name": "Cocktail",
+  "genre": "Drama, Kom\u00f6dien, Romantik",
+  "year": 1988,
+  "description": "Die Welt der Reichen mit Ihren Nobelbars und exklusiven Clubs hat es einem Mann angetan, Brian Flanagan (Tom Cruise).",
+  "category": "Movie",
+  "type": "movie",
+  "breadcrumbs": [],
+  "studio": "Touchstone Pictures",
+  "prices": [
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2495c9a2-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "rent",
+      "variant": "hd",
+      "amount_cents": 399,
+      "amount_currency": "EUR",
+      "channel": ""
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2495cd3a-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "rent",
+      "variant": "sd",
+      "amount_cents": 399,
+      "amount_currency": "EUR",
+      "channel": ""
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2495cfa6-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "buy",
+      "variant": "hd",
+      "amount_cents": 999,
+      "amount_currency": "EUR",
+      "channel": ""
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2495d1d6-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "buy",
+      "variant": "sd",
+      "amount_cents": 799,
+      "amount_currency": "EUR",
+      "channel": ""
+    }
+  ],
+  "thumbnail_images": [
+    {
+      "_type": "PhashImageItem",
+      "_typename": "phashimage",
+      "_uuid": "2495a152-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "url": "https://looper-crawlera-images.s3.amazonaws.com/cache/amazon_videos/de/698e0932246cfee485ec07c23ad4b527878cbb73.jpg",
+      "phash": "f0c66d69e4c18b1e"
+    }
+  ],
+  "uber_images": [
+    {
+      "_type": "PhashImageItem",
+      "_typename": "phashimage",
+      "_uuid": "24959f04-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "url": "https://looper-crawlera-images.s3.amazonaws.com/cache/amazon_videos/de/c68dbc96c1901f074cd680d6d791c435a8db5868.jpg",
+      "phash": "9264591f4fb68457"
+    }
+  ],
+  "is_preorder": false,
+  "is_free": null,
+  "background_color": "",
+  "primary_text_color": "",
+  "title_text_color": "",
+  "scrape_time": "2025-06-02T14:51:32.566926+00:00",
+  "directors": ""
+}
+2025-06-02 14:52:03 DEBUG [scrapy.core.engine] Crawled (200) <GET https://www.amazon.de/-/en/Dove-Cameron/dp/B076529P41> (referer: None) ['zyte-api']
+2025-06-02 14:52:03 DEBUG [scrapy.core.engine] Crawled (200) <GET https://m.media-amazon.com/images/S/pv-target-images/e3b5fe51502a0726af4e4e0d91af63f3555766bf3f04a29587feca5503dd4667.jpg> (referer: None)
+2025-06-02 14:52:03 DEBUG [scrapy.pipelines.files] File (downloaded): Downloaded file from <GET https://m.media-amazon.com/images/S/pv-target-images/e3b5fe51502a0726af4e4e0d91af63f3555766bf3f04a29587feca5503dd4667.jpg> referred in <None>
+2025-06-02 14:52:03 DEBUG [scrapy.core.scraper] Scraped from <200 https://www.amazon.de/gp/video/detail/B07RYP1QWL/>
+{
+  "_type": "DetailItem",
+  "_typename": "detail",
+  "_uuid": "2486dd98-3fc1-11f0-9f78-0242ac11000f",
+  "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+  "_original_url": null,
+  "_original_image_urls": [
+    "https://m.media-amazon.com/images/S/pv-target-images/b2cc621d1c3d34936a5f1fa32521ddcc17bd578dea65b3c002a205f75cc84411.jpg",
+    "https://m.media-amazon.com/images/S/pv-target-images/c6a5d71520b9ce619d101c81c4564b7282992e8e1b083722493631e98c9d444f.png"
+  ],
+  "_hardcoded_url": true,
+  "_imdb_rating": null,
+  "_current_rating": "12",
+  "id": "B07RYP1QWL",
+  "url": "https://www.amazon.de/gp/video/detail/B07RYP1QWL/",
+  "collection_id": "",
+  "name": "Alita: Battle Angel",
+  "display_name": "Alita: Battle Angel",
+  "genre": "Action, Adventure, Science Fiction, Suspense",
+  "year": 2019,
+  "description": "From visionary filmmakers James Cameron (AVATAR) and Robert Rodriguez (SIN CITY), comes ALITA: BATTLE ANGEL, an epic adventure of hope and empowerment.",
+  "category": "Movie",
+  "type": "movie",
+  "breadcrumbs": [],
+  "studio": "20th Century Fox",
+  "prices": [
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2486cee8-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "subscription",
+      "variant": "hd",
+      "amount_cents": 0,
+      "amount_currency": "EUR",
+      "channel": "Prime "
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2486d24e-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "rent",
+      "variant": "4k",
+      "amount_cents": 399,
+      "amount_currency": "EUR",
+      "channel": "Prime "
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2486d47e-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "rent",
+      "variant": "hd",
+      "amount_cents": 399,
+      "amount_currency": "EUR",
+      "channel": "Prime "
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2486d69a-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "rent",
+      "variant": "sd",
+      "amount_cents": 399,
+      "amount_currency": "EUR",
+      "channel": "Prime "
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2486d8ac-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "buy",
+      "variant": "4k",
+      "amount_cents": 999,
+      "amount_currency": "EUR",
+      "channel": "Prime "
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2486da78-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "buy",
+      "variant": "hd",
+      "amount_cents": 999,
+      "amount_currency": "EUR",
+      "channel": "Prime "
+    },
+    {
+      "_type": "PriceItem",
+      "_typename": "price",
+      "_uuid": "2486dc44-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "type": "buy",
+      "variant": "sd",
+      "amount_cents": 999,
+      "amount_currency": "EUR",
+      "channel": "Prime "
+    }
+  ],
+  "thumbnail_images": [
+    {
+      "_type": "PhashImageItem",
+      "_typename": "phashimage",
+      "_uuid": "2486bd36-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "url": "https://looper-crawlera-images.s3.amazonaws.com/cache/amazon_videos/de/094fc472c91172f406bf02c7986e8916f0b35bc7.jpg",
+      "phash": "fc43f44b5a8027a7"
+    }
+  ],
+  "uber_images": [
+    {
+      "_type": "PhashImageItem",
+      "_typename": "phashimage",
+      "_uuid": "2486bad4-3fc1-11f0-9f78-0242ac11000f",
+      "_timestamp": "2025-06-02T14:51:32.550798+00:00",
+      "url": "https://looper-crawlera-images.s3.amazonaws.com/cache/amazon_videos/de/a41fddb858ab4bb8b95e232ec8cebf8dc497a7de.jpg",
+      "phash": "d5dd7a39184c8647"
+    }
+  ],
+  "is_preorder": false,
+  "is_free": null,
+  "background_color": "",
+  "primary_text_color": "",
+  "title_text_color": "",
+  "scrape_time": "2025-06-02T14:51:32.566926+00:00",
+  "directors": ""
+}

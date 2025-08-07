@@ -3,6 +3,7 @@ import re
 import json
 import io
 from analyser import analyze_entries
+import pprint
 
 def parse_log_file(file_obj):
     title_urls = set()
@@ -114,6 +115,5 @@ if __name__ == "__main__":
     file_obj = io.StringIO(content)
     parsed_data = parse_log_file(file_obj)
     report = analyze_entries(parsed_data)
-    import pprint
     pprint.pprint(parsed_data["summary"])
     pprint.pprint(report)
